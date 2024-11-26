@@ -87,7 +87,7 @@ if uploaded_file:
     avg_rating_by_category = data.groupby('Category')['Rating'].mean().sort_values(ascending=False)
     
     # Create figure
-    fig4, ax4 = plt.subplots(figsize=(10, 6))
+    fig4, ax4 = plt.subplots(figsize=(10, 10))
     sns.barplot(x=avg_rating_by_category.index, y=avg_rating_by_category.values, palette='plasma', ax=ax4)
     
     # Set titles and labels
